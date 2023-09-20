@@ -19,7 +19,7 @@ Los métodos son:
 
 Para instalar basta con ejecutar los siguientes comandos:
 
-- git clone https://github.com/vazqui12/Casino.git
+- git clone [https://github.com/vazqui12/Casino.git](https://github.com/vazqui12/Casino.git)
 
 - cd Casino
 
