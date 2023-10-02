@@ -9,7 +9,7 @@ Los métodos son:
 - Martingala
 - Reverse Labouchere
 
-## Tabla de Contenidos
+## 📑 Tabla de Contenidos
 
 - [Instalación](#instalación)
 - [Uso](#uso)
