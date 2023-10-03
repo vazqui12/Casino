@@ -29,7 +29,7 @@ function helpPanel(){
     echo -e "\t${purpleColour}h)${endColour}${grayColour} Mostrando el panel de ayuda${endColour}\n"
 }
 
-# Plantilla para declarar funciones
+# Funcion Martingala
 function martingala(){
     echo -e "\n${yellowColour}[+]${endColour}${grayColour} Dinero actual: ${endColour}${yellowColour} $money${endColour}\n"
 	echo -ne "\n${yellowColour}[+]${endColour}${grayColour} ¿Cuanto dinero tienes pensado apostar? -> ${endColour}" && read initial_bet
@@ -52,7 +52,7 @@ function martingala(){
                 if [ "$(($random_number % 2))" -eq 0 ]; then
                     if [ "$random_number" -eq 0 ]; then
                         initial_bet=$(($initial_bet*2))
-                        jugadas_malas="$random_number"
+                        jugadas_malas+="$random_number"
 #                       echo -e "\n${yellowColour}[+]${endColour}${grayColour} El numero que ha salido 0, por tanto, perdemos${endColour}\n"
                     else
 #                       echo -e "\n${yellowColour}[+]${endColour}${grayColour} El numero que ha salido es par${endColour}\n"
@@ -64,7 +64,7 @@ function martingala(){
                 else
 #                       echo -e "\n${yellowColour}[+]${endColour}${grayColour} El numero que ha salido es impar${endColour}\n"
                         initial_bet=$(($initial_bet*2))
-                        jugadas_malas="$random_number"
+                        jugadas_malas+="$random_number"
                 fi
             fi
         else
@@ -84,7 +84,13 @@ function martingala(){
     tput cnorm
 }
 
+# Funcion Inverse Labrouchere
+function inverseLabrouchere(){
 
+
+
+
+}
 
 # Menú
 # m tiene : porque se espera que se proporcione un argumento siempre que se use -m. Con -h no es necesario
@@ -103,6 +109,8 @@ done
 if [ $money ] && [ $technique ]; then 
     if [ "$technique" == "martingala" ]; then
 		martingala
+    elif [ "$technique" == "inverseLabrouchere" ]; then
+        inverseLabrouchere
     else
 		echo -e "\n${redColour}[!] La técnica introducida no es correcta${endColour}\n"
 		helpPanel
